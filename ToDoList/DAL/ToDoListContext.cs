@@ -10,6 +10,7 @@ namespace ToDoList.DAL
             Database.SetInitializer<ToDoListContext>(new ToDoListContextInitializer());
         }
 
-        public DbSet<ToDoListItem> ToDoListItems;
+        public DbSet<ToDoListItem> ToDoListItems { get; set; }
+
     }
 }
