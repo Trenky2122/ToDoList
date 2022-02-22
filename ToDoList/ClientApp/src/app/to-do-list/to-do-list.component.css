@@ -1,0 +1,17 @@
+.full-width{
+  width: 100%;
+}
+
+.icon-button{
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  float: right;
+  height: 30px;
+  padding-top: 3px;
+}
+
+.icon-button:hover{
+  color: #EEEEEE;
+}

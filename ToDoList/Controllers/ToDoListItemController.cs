@@ -50,6 +50,7 @@ namespace ToDoList.Controllers
             if (itemOld == null)
                 return NotFound();
             _context.ToDoListItems.Remove(itemOld);
+            await _context.SaveChangesAsync();
             return Ok(itemOld);
         }
     }
