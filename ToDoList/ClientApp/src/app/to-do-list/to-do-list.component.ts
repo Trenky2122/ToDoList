@@ -8,6 +8,7 @@ import {ToDoListFacade} from "../to-do-list-facade";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {MatDialog} from "@angular/material/dialog";
 import {EditItemComponent} from "./edit-item/edit-item.component";
+import {Constants} from "../models/constants";
 
 @Component({
   selector: 'app-to-do-list',
@@ -30,7 +31,7 @@ export class ToDoListComponent implements OnInit {
   }
 
   createItem(){
-    this.facade.selectedItem = {id: 0, isDone: false, itemText: ""};
+    this.facade.selectedItem = Constants.DefaultToDoListItem;
     this.dialog.open(EditItemComponent, {width: "80%"});
   }
 

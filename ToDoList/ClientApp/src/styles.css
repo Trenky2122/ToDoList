@@ -20,7 +20,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .snackBarMessage{
   background-color: #0366d6;
+  color: #FFFFFF;
 }
  .snackBarError{
    background-color: #FF0000;
+   color: #FFFFFF;
  }

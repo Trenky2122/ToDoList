@@ -3,6 +3,7 @@ import {DataAccessService} from "./data-access.service";
 import {ToDoListItem} from "./models/models";
 import {BehaviorSubject, Observable} from "rxjs";
 import {UtilsService} from "./utils.service";
+import {Constants} from "./models/constants";
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ToDoListFacade{
   public ToDoListItems: Observable<ToDoListItem[]> = this._toDoListItemSubject.asObservable();
   private _isLoadingSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public IsLoading: Observable<boolean> = this._isLoadingSubject.asObservable();
-  public selectedItem: ToDoListItem = {id: 0, isDone: false, itemText: ""};
+  public selectedItem: ToDoListItem = Constants.DefaultToDoListItem;
   constructor(private service: DataAccessService, private utils: UtilsService) {
     this.loadAllToDoListItems();
   }

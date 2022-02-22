@@ -12,11 +12,11 @@
     </ng-container>
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>
-        <mat-icon (click)="createItem()" class="ms-1 icon-button add-button" style="width: 132px; background-color: green">add</mat-icon>
+        <mat-icon (click)="createItem()" class="ms-1 icon-button" style="width: 132px; background-color: green">add</mat-icon>
       </th>
       <td mat-cell *matCellDef="let item">
-        <mat-icon (click)="updateItem(item)" class="icon-button  ms-1" style="background-color: #0000FF; float: right; width: 64px">edit</mat-icon>
-        <mat-icon (click)="deleteItem(item.id)" class="icon-button" style="background-color: #FF0000; float: right; width: 64px">delete</mat-icon>
+        <mat-icon (click)="updateItem(item)" class="icon-button ms-1" style="background-color: #0000FF; width: 64px">edit</mat-icon>
+        <mat-icon (click)="deleteItem(item.id)" class="icon-button" style="background-color: #FF0000; width: 64px">delete</mat-icon>
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
